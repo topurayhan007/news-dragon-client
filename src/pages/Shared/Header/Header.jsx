@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../../assets/logo.png";
 import moment from "moment";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { FaUserCircle } from "react-icons/fa";
+import NavigationBar from "../NavigationBar/NavigationBar";
 
 const Header = () => {
+
   return (
     <Container className="mt-4">
       <div className="text-center">
@@ -29,38 +33,6 @@ const Header = () => {
           Highlights: Germany vs Spain as...
         </Marquee>
       </div>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="light"
-        variant="light"
-        className="mt-2"
-      >
-        <Container>
-          <Navbar.Brand href="#home"></Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto me-auto">
-              <Nav.Link href="#features">
-                <Link to="/">Home</Link>
-              </Nav.Link>
-              <Nav.Link href="#pricing">
-                <Link>About</Link>
-              </Nav.Link>
-              <Nav.Link href="#career">
-                <Link>Career</Link>
-              </Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link>
-                <Button variant="secondary" className="rounded-0">
-                  Login
-                </Button>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </Container>
   );
 };
