@@ -50,7 +50,7 @@ const RightNav = () => {
       <QZone></QZone>
 
       <div
-        className="mt-4 text-white text-center d-flex flex-column justify-content-center align-items-center px-5"
+        className="mt-4 text-white rounded-1 text-center d-flex flex-column justify-content-center align-items-center px-5"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundPosition: "center",
@@ -64,7 +64,7 @@ const RightNav = () => {
           Discover thousands of options, easy to customize layouts, one-click to
           import demo and much more.
         </p>
-        <Button variant="danger" className="rounded-0 px-4 py-2">
+        <Button variant="danger" className="rounded-1 px-4 py-2 fw-bold">
           Latest
         </Button>
       </div>
