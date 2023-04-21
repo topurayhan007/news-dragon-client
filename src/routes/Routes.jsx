@@ -3,6 +3,8 @@ import App from "../App";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Category from "../pages/Home/Category/Category";
+import NewsLayout from "../layouts/NewsLayout";
+import News from "../pages/News/News/News";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,22 @@ const router = createBrowserRouter([
       {
         path: "/category/:id",
         element: <Category></Category>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
+      },
+      {
+        path: "/news/:id",
+        element: <News></News>,
+      },
+    ],
+  },
+  {
+    path: "/news",
+    element: <NewsLayout></NewsLayout>,
+    children: [
+      {
+        path: ":id",
+        element: <News></News>,
       },
     ],
   },
