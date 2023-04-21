@@ -6,9 +6,9 @@ const Login = () => {
   return (
     <Container className="mt-5">
       <h3 className="text-center  mb-3">Please Login</h3>
-      <Form className="bg-light p-5">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+      <Form className="bg-light p-5 w-50 mx-auto">
+        <Form.Group className="mb-4" controlId="formBasicEmail">
+          <Form.Label className="fw-bold">Email address</Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -17,8 +17,8 @@ const Login = () => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+        <Form.Group className="mb-4" controlId="formBasicPassword">
+          <Form.Label className="fw-bold">Password</Form.Label>
           <Form.Control
             type="password"
             name="password"
@@ -28,7 +28,7 @@ const Login = () => {
         </Form.Group>
 
         <div className="d-flex justify-content-center mt-4">
-          <Button variant="dark" type="submit" className="w-100 rounded-1">
+          <Button variant="dark" type="submit" className="w-100 rounded-1 py-2">
             Login
           </Button>
         </div>

@@ -6,7 +6,7 @@ const Register = () => {
   return (
     <Container className="mt-5">
       <h3 className="text-center  mb-3">Please Register</h3>
-      <Form className="bg-light p-5">
+      <Form className="bg-light p-5 w-50 mx-auto">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="fw-bold">Your Name</Form.Label>
           <Form.Control
@@ -53,7 +53,7 @@ const Register = () => {
         </Form.Group>
 
         <div className="d-flex justify-content-center">
-          <Button variant="dark" type="submit" className="w-100 rounded-1">
+          <Button variant="dark" type="submit" className="w-100 rounded-1 py-2">
             Register
           </Button>
         </div>

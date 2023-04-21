@@ -20,10 +20,17 @@ const NavigationBar = () => {
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto me-auto">
-              <Link to="/category/0">Home</Link>
-              <Link>About</Link>
-              <Link>Career</Link>
+            <Nav className="ms-auto me-auto d-flex gap-3">
+              <Link
+                className="text-decoration-none text-secondary"
+                to="/category/0"
+              >
+                Home
+              </Link>
+              <Link className="text-decoration-none text-secondary">About</Link>
+              <Link className="text-decoration-none text-secondary">
+                Career
+              </Link>
             </Nav>
             <Nav>
               {user && (
@@ -33,12 +40,12 @@ const NavigationBar = () => {
                 </div>
               )}
               {user ? (
-                <Button variant="secondary" className="rounded-0">
+                <Button variant="secondary" className="rounded-0 mx-1">
                   Logout
                 </Button>
               ) : (
                 <Link to="/login">
-                  <Button variant="secondary" className="rounded-0">
+                  <Button variant="secondary" className="rounded-0 mx-1">
                     Login
                   </Button>
                 </Link>
