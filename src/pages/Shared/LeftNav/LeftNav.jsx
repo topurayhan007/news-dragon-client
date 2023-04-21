@@ -17,16 +17,13 @@ const LeftNav = () => {
   // console.log(categories);
 
   return (
-    <div className="text-center mt-4">
+    <div className="text-left">
       <h4 className="mb-3">All Category</h4>
-      <div className="">
+      <div className="d-flex flex-column">
         {categories.map((category) => (
-          <p key={category.id} className="py-2 my-1">
-            {" "}
-            <ActiveLink to={`/category/${category.id}`} className="w-100">
-              {category.name}
-            </ActiveLink>
-          </p>
+          <ActiveLink key={category.id} to={`/category/${category.id}`}>
+            {category.name}
+          </ActiveLink>
         ))}
       </div>
     </div>

@@ -7,8 +7,8 @@ const ActiveLink = ({ to, children }) => {
       to={to}
       className={({ isActive }) =>
         isActive
-          ? "text-decoration-none text-secondary bg-light rounded py-2 px-5 fw-semibold text-center"
-          : "text-decoration-none text-secondary rounded py-2 px-5 fw-semibold text-center"
+          ? "text-decoration-none text-secondary bg-light rounded my-1 py-2 px-5 fw-semibold text-left"
+          : "text-decoration-none text-secondary rounded my-1 py-2 px-5 fw-semibold text-left"
       }
     >
       {children}
